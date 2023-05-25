@@ -1,0 +1,107 @@
+.search-box {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    margin-left: 250px;
+}
+
+.input-search {
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    padding-right: 40px;
+    color: white;
+    background-color: #24262b;
+}
+
+.input-search::placeholder {
+    color: #bbbbbb;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+.btn-search {
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color: #bbbbbb;
+    background-color: transparent;
+    pointer-events: painted;
+}
+
+.btn-search:focus~.input-search {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid #24262b;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.input-search:focus {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+#parcat {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#category-select {
+    border-radius: 30px;
+    padding: 0 30px;
+}
+
+#affiche {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin: 50px;
+}
+
+#affiche a {
+    text-align: center;
+    text-decoration: none;
+    background-color: #f1f2f6;
+    border-radius: 40px;
+    padding: 10px 0;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(47, 50, 64);
+    box-shadow: 5px 5px rgb(47, 50, 64,0.5);
+}
+
+#h1_catalogue {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    color: #2f3240;
+    text-decoration: underline;
+}
+
+#affiche a img {
+    width: 300px;
+    height: 200px;
+    border-radius: 50px;
+    border: 1px solid #2f3240
+}

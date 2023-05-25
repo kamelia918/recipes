@@ -1,0 +1,84 @@
+#limagedetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#limagedetail img {
+    height: 500px;
+    width: 1100px;
+    border-radius: 20px;
+    border: 2px solid lightgray;
+}
+
+#generale {
+    border: 1px solid black;
+    position: absolute;
+    left: 180px;
+    top: -70px;
+    width: 400px;
+    background-color: #90a955;
+    box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+#detail_Container {
+    display: flex;
+    position: relative;
+    height: 180vh;
+}
+
+#detaille {
+    width: 600px;
+    position: absolute;
+    right: 132px;
+    top: 20px;
+    line-height: 30px;
+}
+
+#generale h3,
+#detaille h3 {
+    font-family: 'Lobster Two', cursive;
+    font-size: 50px;
+    text-align: center;
+    line-height: 100px;
+}
+
+#info {
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+#ingredient {
+    font-size: 15px;
+    line-height: 23px;
+    padding: 10px;
+}
+
+#ingredient li {
+    list-style: inside;
+}
+
+#lescommentaires {
+    position: absolute;
+    bottom: 50px;
+    left: 130px;
+    width: 450px;
+}
+
+#lescommentaires img {
+    width: 70px;
+}
+
+.le_com {
+    display: flex;
+    line-height: 20px;
+    font-size: 13px;
+}
+
+.comment {
+    margin: 10px;
+    border-bottom: 1px solid darkgray;
+}

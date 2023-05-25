@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/catalogue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Catalogue</title>
+</head>
+
+<body onload="affichecat()">
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <img src="../more_images/one-removebg-preview (1).png" alt="logo" style="height: 50px;">
+                </div>
+                <div class="search-box">
+                    <button class="btn-search"><i class="fas fa-search"></i></button>
+                    <input type="text" id="search-input" class="input-search" placeholder="Type to Search..." oninput="filterRecipes()"
+                        onkeydown="if(event.keyCode === 13) {filterRecipe();}">
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="/projet-recettes/html/index.html" class="active" style="color: white;">home</a></li>
+                        <li><a href="#" style="color: #f3a93d;">catalogue</a></li>
+                        <li><a href="#footer-contact">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <h1 id="h1_catalogue">Catalogue des recettes</h1>
+        <!-- Étape 4: filtre par catégorie -->
+        <div id="parcat">
+        <label for="category-select">Filtrer par catégorie : </label>
+        <select id="category-select" onchange="ilterRecipesCATEGORIE()">
+            <option value="">Toutes les catégories</option>
+            <option value="Petit déjeuner">Petit déjeuner</option>
+            <option value="Déjeuner">Déjeuner</option>
+            <option value="Dîner">Dîner</option>
+            <option value="Plat principal">Plat principal</option>
+            <option value="Entrée">Entrée</option>
+            <option value="Plat">Plat</option>
+        </select>
+        </div>
+        
+        <div id="affiche"></div>
+    </div>
+</div>
+        <footer id="footer-contact">
+            <div class="footer-content">
+                <img src="../more_images/one-removebg-preview.png" style="width: 300px;" alt="LOGO">
+                <p>
+                    merci d'avoir visiter notre site web cook , si vous voulez plus d'information veillez nous suivre sur nos reseaux
+                    sociaux
+                </p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2023 cook. designed by <span>me</span> </p>
+            </div>
+        </footer>
+        
+</body>
+<script src="../js/recettesDB.js"></script>
+<script src="../js/catalogue.js"></script>
+
+</html>

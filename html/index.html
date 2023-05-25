@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/accueil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> 
+
+    <title>Acceuil</title>
+</head>
+
+<body onload="afficheralea()">
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <img src="../more_images/one-removebg-preview (1).png" alt="logo"  style="height: 50px;">
+                </div>
+                <button type="button" class="nav-toggler">
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#" class="active">home</a></li>
+                        <li><a href="#a-propos">about</a></li>
+                        <li><a href="./catalogue.html" >catalogue</a></li>
+                        <li><a href="#footer-contact">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <script>
+        const navToggler = document.querySelector(".nav-toggler");
+            navToggler.addEventListener("click", navToggle);
+
+            function navToggle() {
+                navToggler.classList.toggle("active");
+                const nav = document.querySelector(".nav");
+                nav.classList.toggle("open");
+                if (nav.classList.contains("open")) {
+                    nav.style.maxHeight = nav.scrollHeight + "px";
+                }
+                else {
+                    nav.removeAttribute("style");
+                }
+            } 
+    </script>
+    <main>
+        <section id="hero">
+            <div id="colors">
+            <div id="lightorangeunder"></div>
+            <div id="darkgreen"></div>
+            <div id="lighorange"></div>
+            <div id="green"></div>
+            <div id="oorange"></div>
+            <div id="firstdiv">
+                <img src="../more_images/food 1.png" alt="food">
+            </div>
+            </div>
+            <div id="seconddiv">
+            <h1>Ne perdez plus votre temps à chercher quoi cuisiner...</h1>
+            <p>Trouvez votre plat parfait et cuisinez-le simplement et rapidement !</p>
+            <a href="catalogue.html"><button>Catalogue</button></a>
+            </div>
+
+        </section>
+
+        <section id="a-propos">
+            <div id="apropos">
+            <h2>À propos</h2>
+            <p>
+            Bienvenue sur notre site de recettes ! Nous sommes ravis de vous accueillir dans notre communauté de passionnés de
+            cuisine. Notre objectif est de vous offrir une expérience culinaire unique en vous proposant des recettes savoureuses,
+            simples et faciles à suivre. Que vous soyez débutant en cuisine ou un chef expérimenté, vous trouverez ici une multitude
+            de recettes adaptées à tous les niveaux de compétence.
+            Nous espérons que vous trouverez sur notre site l'inspiration dont vous avez besoin pour préparer de délicieux plats et
+            desserts. N'hésitez pas à nous faire part de vos commentaires et suggestions, et à partager vos propres recettes avec la
+            communauté. Bon appétit !</p> 
+            </div>
+            <img src="../more_images/Mon projet.png" alt="ABOUT_IMAGE">
+        </section>
+        <section id="categories">
+            <h2>Catégories</h2>
+            <ul>
+                <li>Petit déjeuner</li>
+                <li>Déjeuner</li>
+                <li>Dîner</li>
+                <li>Plat principal</li>
+                <li>Entrée</li>
+                <li>Plat</li>
+            </ul>
+        </section>
+    </main>
+    <div id="recettealeatoire"></div>
+    <footer id="footer-contact">
+        <div class="footer-content">
+            <img src="../more_images/one-removebg-preview.png" style="width: 300px;" alt="LOGO">
+            <p>
+                merci d'avoir visiter notre site web cook , si vous voulez plus d'information veillez nous suivre sur nos reseaux sociaux 
+            </p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2023 cook. designed by <span>me</span> </p>
+        </div>
+    </footer>
+    
+</body>
+<script src="../js/recettesDB.js"></script>
+<script src="../js/accueil.js"></script>
+
+</html>
